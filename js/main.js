@@ -48,7 +48,7 @@ $.getJSON("../data.json", (data) => {
     SetSortableList();
 });
 
-function AddItemOption(data){
+function AddItemOption(data) {
     let item = document.createElement("div");
     item.setAttribute("class", "App-item");
 

@@ -156,6 +156,8 @@ body {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   cursor: pointer;
+  -webkit-transition: background-color ease-in-out .2s;
+  transition: background-color ease-in-out .2s;
 }
 
 .App-item > p {
@@ -166,6 +168,10 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
   font-size: 16px;
+}
+
+.App-item:hover {
+  background-color: #b4b4b4;
 }
 
 .blue-item-class {
@@ -189,7 +195,7 @@ body {
 }
 
 .gray-item-class {
-  background-color: #aaaaaa;
+  background-color: #b4b4b4;
 }
 
 *::-webkit-scrollbar {
@@ -211,6 +217,6 @@ body {
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background-color: #aaaaaa;
+  background-color: #b4b4b4;
 }
 /*# sourceMappingURL=styles.css.map */
