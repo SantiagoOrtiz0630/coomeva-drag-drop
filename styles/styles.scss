@@ -7,10 +7,11 @@ $blackColor: rgb(26, 26, 26);
 $whiteColor: rgb(253, 253, 253);
 $grayColor: rgb(170, 170, 170);
 $darkGrayColor: rgb(120, 120, 120);
-$redColor: rgb(216, 70, 94);
-$blueColor: rgb(65, 136, 228);
+$redColor: rgb(233, 103, 124);
+$blueColor: rgb(113, 167, 238);
 $greenColor: rgb(77, 235, 156);
 $yellowColor: rgb(235, 211, 77);
+$purpleColor: rgb(190, 133, 236);
 
 
 * {
@@ -41,7 +42,7 @@ body {
 
         background-color: $darkGrayColor;
 
-        padding: 25px;
+        padding: 20px 10px;
 
         flex-shrink: 0;
         margin-right: 250px;
@@ -53,7 +54,7 @@ body {
 
         background-color: $darkGrayColor;
 
-        padding: 25px;
+        padding: 20px 10px;
 
         flex-shrink: 0;
         margin-right: 45px;
@@ -65,9 +66,11 @@ body {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        //overflow: auto;\
+        overflow: auto;
 
         flex: 0 0 auto;
+
+        padding: 0 10px;
 
         height: calc(100% - 100px );
     }
@@ -78,11 +81,34 @@ body {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        //overflow: auto;\
+        overflow: auto;
+
+        padding: 0 10px;
 
         flex: 0 0 auto;
 
         height: calc(100% - 100px );
+    }
+
+    &-MainListTitle{
+        width: 100%;
+        height: 100px;
+
+        font-family: $fontTitle;
+
+        font-size: 22px;
+        font-weight: 800;
+        font-style: oblique;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        padding: 0 10px;
+
+        flex: 0 0 auto;
     }
 
     &-ListTitle{
@@ -91,8 +117,11 @@ body {
 
         font-family: $fontTitle;
 
+        font-size: 19px;
         font-weight: 800;
         font-style: oblique;
+
+        padding: 0 10px;
 
         display: flex;
 
@@ -110,18 +139,25 @@ body {
 
         margin-bottom: 15px;
 
-        font-family: $fontTitle;
-        font-weight: 700;
-
         display: flex;
 
         flex-direction: column;
         align-items: center;
         align-content: center;
-
         justify-content: center;
-
         flex-shrink: 0;
+
+        cursor: pointer;
+
+        >p{
+            display: none;
+        }
+
+        >h3{
+            font-family: $fontText;
+            font-weight: 500;
+            font-size: 16px;
+        }
     }
 
 }
@@ -140,6 +176,10 @@ body {
 
 .yellow-item-class{
     background-color: $yellowColor;
+}
+
+.purple-item-class{
+    background-color: $purpleColor;
 }
 
 .gray-item-class{

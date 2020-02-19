@@ -1,0 +1,104 @@
+{
+    "categories": [{
+            "title": "Categoría 1",
+            "options": [
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        {
+            "title": "Categoría 2",
+            "options": [
+                4,
+                5,
+                6,
+                7
+            ]
+        },
+        {
+            "title": "Categoría 3",
+            "options": [
+                8,
+                9,
+                10,
+                11
+            ]
+        },
+        {
+            "title": "Categoría 4",
+            "options": [
+                12,
+                13,
+                14,
+                15
+            ]
+        }
+    ],
+    "options": [{
+            "id": 0,
+            "title": "Opción 1"
+        },
+        {
+            "id": 1,
+            "title": "Opción 2"
+        },
+        {
+            "id": 2,
+            "title": "Opción 3"
+        },
+        {
+            "id": 3,
+            "title": "Opción 4"
+        },
+        {
+            "id": 4,
+            "title": "Opción 5"
+        },
+        {
+            "id": 5,
+            "title": "Opción 6"
+        },
+        {
+            "id": 6,
+            "title": "Opción 7"
+        },
+        {
+            "id": 7,
+            "title": "Opción 8"
+        },
+        {
+            "id": 8,
+            "title": "Opción 9"
+        },
+        {
+            "id": 9,
+            "title": "Opción 10"
+        },
+        {
+            "id": 10,
+            "title": "Opción 11"
+        },
+        {
+            "id": 11,
+            "title": "Opción 12"
+        },
+        {
+            "id": 12,
+            "title": "Opción 13"
+        },
+        {
+            "id": 13,
+            "title": "Opción 14"
+        },
+        {
+            "id": 14,
+            "title": "Opción 15"
+        },
+        {
+            "id": 15,
+            "title": "Opción 16"
+        }
+    ]
+}

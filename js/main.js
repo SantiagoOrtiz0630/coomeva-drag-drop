@@ -1,37 +1,67 @@
-let listContainer = document.getElementsByClassName("App-List");
+///// AAA /////
 
+let listContainer = document.getElementsByClassName("App-List");
 let mainListContainer = document.getElementsByClassName("App-MainList")[0];
+
+/////SORTABLEE JS/////
 
 let sortContainer = [];
 let mainSortContainer = null;
 
-mainSortContainer = Sortable.create(mainListContainer, {
-    animation: 150,
-    ghostClass: 'gray-item-class',
-    group: 'main',
+let dataRead = null;
+let itemRead = null;
+
+let groupList = "main";
+
+let classColorArray = [
+    "blue-item-class",
+    "green-item-class",
+    "red-item-class",
+    "yellow-item-class",
+    "purple-item-class"
+];
+
+function SetSortableList() {
+    mainSortContainer = Sortable.create(mainListContainer, {
+        animation: 150,
+        ghostClass: 'gray-item-class',
+        group: groupList,
+    });
+
+    for (let index = 0; index < dataRead.categories.length; index++) {
+        sortContainer[index] = Sortable.create(listContainer[index], {
+            animation: 150,
+            ghostClass: classColorArray[index],
+            group: groupList,
+        });
+    }
+
+    for (let index = 0; index < dataRead.options.length; index++) {
+        const e = dataRead.options[index];
+        AddItemOption(e);
+    }
+}
+
+$.getJSON("../data.json", (data) => {
+    dataRead = data;
+
+    SetSortableList();
 });
 
-sortContainer[0] = Sortable.create(listContainer[0], {
-    animation: 150,
-    ghostClass: 'blue-item-class',
-    group: 'main',
-});
+function AddItemOption(data){
+    let item = document.createElement("div");
+    item.setAttribute("class", "App-item");
 
-sortContainer[1] = Sortable.create(listContainer[1], {
-    animation: 150,
-    ghostClass: 'green-item-class',
-    group: 'main',
-});
+    let title = document.createElement("h3");
+    let id = document.createElement("p");
 
-sortContainer[2] = Sortable.create(listContainer[2], {
-    animation: 150,
-    ghostClass: 'red-item-class',
-    group: 'main',
-});
+    title.innerHTML = data.title;
+    id.innerHTML = data.id;
 
-sortContainer[3] = Sortable.create(listContainer[3], {
-    animation: 150,
-    ghostClass: 'yellow-item-class',
-    group: 'main',
-});
+    item.appendChild(title);
+    item.appendChild(id);
 
+    mainListContainer.appendChild(item);
+}
+
+///// /////
