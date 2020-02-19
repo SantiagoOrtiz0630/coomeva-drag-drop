@@ -5,10 +5,12 @@ sans-serif;
 
 $blackColor: rgb(26, 26, 26);
 $whiteColor: rgb(253, 253, 253);
-$grayColor: rgb(180, 180, 180);
+$grayColor: rgb(170, 170, 170);
+$darkGrayColor: rgb(120, 120, 120);
 $redColor: rgb(216, 70, 94);
 $blueColor: rgb(65, 136, 228);
 $greenColor: rgb(77, 235, 156);
+$yellowColor: rgb(235, 211, 77);
 
 
 * {
@@ -31,17 +33,74 @@ body {
     justify-content: flex-start;
     align-content: center;
 
-    &-list{
-        width: 450px;
-        height: auto;
+    padding: 45px;
 
-        background-color: $grayColor;
+    &-MainListContainer{
+        width: 300px;
+        height: 100%;
+
+        background-color: $darkGrayColor;
 
         padding: 25px;
 
         flex-shrink: 0;
+        margin-right: 250px;
+    }
 
-        margin-left: 25px;
+    &-ListContainer{
+        width: 300px;
+        height: 100%;
+
+        background-color: $darkGrayColor;
+
+        padding: 25px;
+
+        flex-shrink: 0;
+        margin-right: 45px;
+    }
+
+    &-MainList{
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        //overflow: auto;\
+
+        flex: 0 0 auto;
+
+        height: calc(100% - 100px );
+    }
+
+    &-List{
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        //overflow: auto;\
+
+        flex: 0 0 auto;
+
+        height: calc(100% - 100px );
+    }
+
+    &-ListTitle{
+        width: 100%;
+        height: 100px;
+
+        font-family: $fontTitle;
+
+        font-weight: 800;
+        font-style: oblique;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        flex: 0 0 auto;
     }
 
     &-item{
@@ -61,6 +120,8 @@ body {
         align-content: center;
 
         justify-content: center;
+
+        flex-shrink: 0;
     }
 
 }
@@ -75,4 +136,35 @@ body {
 
 .red-item-class{
     background-color: $redColor;
+}
+
+.yellow-item-class{
+    background-color: $yellowColor;
+}
+
+.gray-item-class{
+    background-color: $grayColor;
+}
+
+//SCROLL
+
+*::-webkit-scrollbar{
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track{
+    background-color: $whiteColor;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: $blackColor;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: $blackColor;
+    transition: all ease-in-out .2s;
+
+    &:hover{
+        background-color: $grayColor;
+    }
 }
