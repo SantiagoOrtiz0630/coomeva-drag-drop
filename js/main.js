@@ -33,7 +33,17 @@ function SetSortableList() {
             animation: 150,
             ghostClass: classColorArray[index],
             group: groupList,
+            // Element is dropped into the list from another list
+            onAdd: function (evt) {
+                console.log("Added " + dataRead.categories[index].title,evt.item);
+            },
+            // Element is removed from the list into another list
+            onRemove: function (evt) {
+                console.log("Removed " + dataRead.categories[index].title,evt.item);
+            },
         });
+
+        document.getElementsByClassName("App-ListTitle")[index].innerHTML = dataRead.categories[index].title;
     }
 
     for (let index = 0; index < dataRead.options.length; index++) {
@@ -51,6 +61,8 @@ $.getJSON("../data.json", (data) => {
 function AddItemOption(data) {
     let item = document.createElement("div");
     item.setAttribute("class", "App-item");
+
+    //item.classList.add('animated', 'fadeIn');
 
     let title = document.createElement("h3");
     let id = document.createElement("p");
